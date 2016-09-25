@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">EasyMap</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">SergioMap</string>
+    <string name="search">附近：超市、ATM、餐厅</string>
+    <string name="searchbtn">搜索一下</string>
+    <string name="title_activity_init">InitActivity</string>
+    <string name="exitinit">点我跳过</string>
+    <string name="authorinfo">关于我 : 曾敏\n
+                              QQ号:1262683351\n
+                              CSDN账号:lssjzmn\n
+                              E-mail:swjtuzengmin@163.com\n
+                                                                                此程序是仅用于学习以及交流之用，不带任何商业目的的测试版本，如有疑问可与我交流。\n
+                              This procedure is used only for study and exchange without any commercial purpose\n</string>
+    <string name="title_activity_proposal">ProposalActivity</string>
+    <string name="proposals"> 写下您的反馈意见，我会做得更好！</string>
+    <string name="rate">评个分吧亲</string>
+    <string name="loccheck">开启立即定位</string>
+    <string name="title_activity_download_city">DownloadCityActivity</string>
+    <string name="title_activity_download">DownloadActivity</string>
+    <string name="downloadcity">下载城市离线地图包</string>
+    <string name="citytxt">城市名：</string>
+    <string name="citynamehint">城市名称</string>
+    <string name="download">开始下载</string>
+    <string name="downloadrate">进      度：</string>
+    <string name="canceldownload">取消下载</string>
+    <string name="datasize">离线数据：</string>
+    <string name="datasizelocal">本地数据：</string>
+    <string name="downloadspeed">下载速度：</string>
+    <string name="downloadedcity">已下载城市列表(功能测试中)</string>
+
+</resources>

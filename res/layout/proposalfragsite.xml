@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragsite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCCCCC"
+    android:paddingBottom="20dp" >
+
+    <com.lssjzmn.sergionavi.MyGridLayout
+        android:id="@+id/proposalfragsitecitygrid"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="14dp"
+        android:background="#1e1d1d"
+        android:orientation="vertical"
+        app:itemMargin="1"
+        app:numColumns="4" >
+    </com.lssjzmn.sergionavi.MyGridLayout>
+
+</RelativeLayout>

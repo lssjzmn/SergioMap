@@ -1,0 +1,238 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".DownloadActivity" >
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray" >
+
+        <ImageView
+            android:id="@+id/titleimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:contentDescription="@string/app_name"
+            android:src="@android:drawable/ic_menu_save" />
+
+        <TextView
+            android:id="@+id/titletxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/titleimg"
+            android:padding="4dp"
+            android:text="@string/downloadcity"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        card_view:cardBackgroundColor="@android:color/holo_blue_bright"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardElevation="6dp" >
+
+        <RelativeLayout
+            android:id="@+id/downloadbody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="12dp" >
+
+            <RelativeLayout
+                android:id="@+id/cityname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/citytxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/citytxt"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/editcityname"
+                    android:layout_width="90dp"
+                    android:layout_height="42dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/citytxt"
+                    android:gravity="center_vertical"
+                    android:hint="@string/citynamehint"
+                    android:padding="6dp"
+                    android:textColor="@android:color/background_dark"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textSize="17sp" />
+
+                <Button
+                    android:id="@+id/btndownload"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:layout_toRightOf="@id/editcityname"
+                    android:background="@drawable/downloadbtnbgd"
+                    android:text="@string/download"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/downloadrate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cityname"
+                android:layout_marginTop="20dp" >
+
+                <TextView
+                    android:id="@+id/downloadratetxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/downloadrate"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="18sp" />
+
+                <ProgressBar
+                    android:id="@+id/progressbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="24dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/downloadratetxt"
+                    android:gravity="center_vertical"
+                    android:max="100"
+                    android:paddingLeft="64dp"
+                    android:paddingRight="4dp"
+                    android:progressDrawable="@drawable/ratebarbgd" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/downloadrate"
+                android:layout_marginTop="18dp" >
+
+                <Button
+                    android:id="@+id/btncanceldownload"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/downloadbtnbgd"
+                    android:gravity="center"
+                    android:paddingRight="5dp"
+                    android:text="@string/canceldownload"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/downloadsizetxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/btncanceldownload"
+                    android:paddingTop="5dp"
+                    android:text="@string/datasize"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/downloadsizetxtlocal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/downloadsizetxt"
+                    android:gravity="center_vertical"
+                    android:paddingTop="5dp"
+                    android:text="@string/datasizelocal"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/downloadspeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/downloadsizetxtlocal"
+                    android:gravity="center_vertical"
+                    android:paddingTop="5dp"
+                    android:text="@string/downloadspeed"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardview2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardview"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="1dp"
+        android:orientation="vertical"
+        card_view:cardBackgroundColor="@android:color/holo_blue_bright"
+        card_view:cardCornerRadius="9dp"
+        card_view:cardElevation="6dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent" >
+
+            <TextView
+                android:id="@+id/downloadcitytxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="top"
+                android:paddingTop="5dp"
+                android:text="@string/downloadedcity"
+                android:textColor="@android:color/background_light"
+                android:textSize="20sp" />
+
+            <ListView
+                android:id="@+id/listcitydownloaded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/downloadcitytxt"
+                android:layout_gravity="bottom"
+                android:background="@android:color/transparent"
+                android:choiceMode="singleChoice"
+                android:dividerHeight="1dp"
+                android:layerType="software"
+                android:paddingTop="4dp" >
+            </ListView>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

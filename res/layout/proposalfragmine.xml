@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragmine"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#CCCCCC"
+    android:paddingBottom="60dp" >
+
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/proposalcardview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        card_view:cardBackgroundColor="@android:color/holo_blue_bright"
+        card_view:cardCornerRadius="6dp"
+        card_view:cardElevation="4dp" >
+
+        <RelativeLayout
+            android:id="@+id/fragminecardviewlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/myqrcodetxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="扫一扫二维码加我微信"
+                android:textColor="#999999"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/myqrcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_below="@id/myqrcodetxt"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/mycode" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
